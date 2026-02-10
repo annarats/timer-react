@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# React Countdown Timer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Компонент обратного отсчёта времени, реализованный на **React** без сторонних библиотек.  
+Проект создан как самостоятельный UI-компонент и может использоваться в любых React-проектах для отображения времени до события.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Возможности
 
-### `npm start`
+- React + чистый JavaScript (ES6+)
+- Без дополнительных зависимостей
+- Автоматическое обновление каждую секунду
+- Валидация даты
+- Обработка истечения времени
+- Форматирование с ведущими нулями
+- Оптимизация производительности (useCallback)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Props компонента
 
-### `npm test`
+| Prop | Тип | Описание |
+|------|-----|----------|
+| targetDate | String/Date | Целевая дата события |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Пример targetDate
 
-### `npm run build`
+```javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+"December 31, 2026 23:59:59"
+"2026-12-31T23:59:59"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Технические детали
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### React хуки
+- `useState` — управление состоянием оставшегося времени
+- `useEffect` — setInterval для обновления, cleanup для предотвращения утечек памяти
+- `useCallback` — мемоизация функции расчёта времени
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Демонстрация
+Live version: [https://annarats.github.io/timer-react](https://annarats.github.io/timer-react)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Цель проекта
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Проект создан в учебных и демонстрационных целях для портфолио.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Автор
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Anna Kolovertnykh**  
+Frontend Developer  
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub: [https://github.com/annarats](https://github.com/annarats)
